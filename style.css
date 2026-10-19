@@ -37,4 +37,23 @@ button:hover {
     background-color: #f5b76b;
 }
 
+input {
+    padding: 10px;
+    margin: 5px;
+}
 
+#block, #mouseBox {
+    background-color: lightblue;
+    width: 250px;
+    padding: 40px;
+    margin: 20px auto;
+}
+
+li {
+    margin: 10px;
+    list-style-position: inside;
+}
+
+.completed {
+    text-decoration: line-through;
+}
