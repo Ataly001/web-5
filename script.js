@@ -33,3 +33,23 @@ function changeText(){
         message.textContent = "Your grade is 2";
     }
 }
+
+function changeColor() {
+    let block = document.getElementById("block");
+
+    if (block.style.backgroundColor == "orange") {
+        block.style.backgroundColor = "lightblue";
+    } else {
+        block.style.backgroundColor = "orange";
+    }
+}
+
+function changeSize() {
+    let block = document.getElementById("block");
+
+    if (block.style.fontSize == "30px") {
+        block.style.fontSize = "16px";
+    } else {
+        block.style.fontSize = "30px";
+    }
+}
