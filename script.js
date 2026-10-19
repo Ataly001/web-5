@@ -53,3 +53,22 @@ function changeSize() {
         block.style.fontSize = "30px";
     }
 }
+
+let itemNumber = 0;
+
+function addItem() {
+    itemNumber++;
+
+    let item = document.createElement("li");
+    item.textContent = "Your queue: " + itemNumber;
+
+    document.getElementById("items").appendChild(item);
+}
+
+function removeItem() {
+    let list = document.getElementById("items");
+
+    if (list.lastElementChild) {
+        list.lastElementChild.remove();
+    }
+}
