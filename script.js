@@ -22,5 +22,14 @@ if(document.title="Task 1"){
     console.log(a/b);
 
     console.log("Hello " + name);
+}
 
+function changeText(){
+   let message = document.getElementById("message");
+
+    if (message.textContent == "Your grade is 2") {
+        message.textContent = "Your grade is 5";
+    } else {
+        message.textContent = "Your grade is 2";
+    }
 }
