@@ -72,3 +72,13 @@ function removeItem() {
         list.lastElementChild.remove();
     }
 }
+
+function mouseOver() {
+    document.getElementById("mouseBox").style.backgroundColor =
+        "orange";
+}
+
+function mouseOut() {
+    document.getElementById("mouseBox").style.backgroundColor =
+        "lightblue";
+}
