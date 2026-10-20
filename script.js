@@ -87,3 +87,35 @@ function showText() {
     let text = document.getElementById("userInput").value;
     document.getElementById("output").textContent = text;
 }
+
+function calculate(operator) {
+    let first = document.getElementById("num1").value;
+    let second = document.getElementById("num2").value;
+
+    if (first == "" || second == "") {
+        document.getElementById("result").textContent =
+            "Enter both numbers";
+        return;
+    }
+
+    let a = Number(first);
+    let b = Number(second);
+    let result;
+
+    if (operator == "+") {
+        result = a + b;
+    } else if (operator == "-") {
+        result = a - b;
+    } else if (operator == "*") {
+        result = a * b;
+    } else if (operator == "/") {
+        if (b == 0) {
+            result = "Cannot divide by zero";
+        } else {
+            result = a / b;
+        }
+    }
+
+    document.getElementById("result").textContent =
+        "Result: " + result;
+}
