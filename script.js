@@ -82,3 +82,8 @@ function mouseOut() {
     document.getElementById("mouseBox").style.backgroundColor =
         "lightblue";
 }
+
+function showText() {
+    let text = document.getElementById("userInput").value;
+    document.getElementById("output").textContent = text;
+}
