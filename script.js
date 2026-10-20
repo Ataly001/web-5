@@ -119,3 +119,42 @@ function calculate(operator) {
     document.getElementById("result").textContent =
         "Result: " + result;
 }
+
+let tasks = [];
+
+function addTask() {
+    let input = document.getElementById("taskInput");
+    let text = input.value.trim();
+
+    if (text == "") {
+        return;
+    }
+
+    tasks.push(text);
+
+    let item = document.createElement("li");
+    item.textContent = text + " ";
+
+    let completeButton = document.createElement("button");
+    completeButton.textContent = "Complete";
+
+    completeButton.onclick = function() {
+        item.classList.toggle("completed");
+    };
+
+    let deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+
+    deleteButton.onclick = function() {
+        let index = tasks.indexOf(text);
+        tasks.splice(index, 1);
+        item.remove();
+    };
+
+    item.appendChild(completeButton);
+    item.appendChild(deleteButton);
+
+    document.getElementById("taskList").appendChild(item);
+
+    input.value = "";
+}
